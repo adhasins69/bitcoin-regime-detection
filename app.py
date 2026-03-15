@@ -96,7 +96,7 @@ with st.sidebar:
     if is_aggressive:
         st.warning("⚡ Aggressive mode — lower entry threshold (5/8 votes)")
 
-    st.divider()
+    st.markdown("---")
     st.markdown("### Model Parameters")
 
     n_states = st.slider(
@@ -104,7 +104,7 @@ with st.sidebar:
         help="Number of latent market regimes. Default 5.",
     )
 
-    st.divider()
+    st.markdown("---")
     st.markdown("### Capital & Costs")
 
     starting_capital = st.number_input(
@@ -123,9 +123,9 @@ with st.sidebar:
         help="Estimated price impact on entry and exit",
     )
 
-    st.divider()
+    st.markdown("---")
     run_btn = st.button("🚀 Run Backtest", use_container_width=True, type="primary")
-    st.divider()
+    st.markdown("---")
 
     votes_str = "5 / 8" if is_aggressive else "7 / 8"
     st.markdown("**Active Parameters**")
@@ -138,7 +138,7 @@ with st.sidebar:
 | Fee           | {fee_pct:.2f}% |
 | Slippage      | {slippage_pct:.2f}% |
 """)
-    st.divider()
+    st.markdown("---")
     st.markdown("**8 Confirmation Conditions**")
     st.markdown("""
 1. RSI < 90
